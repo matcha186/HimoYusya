@@ -1,0 +1,413 @@
+body {
+    background-color: rgb(192, 215, 218);
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    height: 100px;
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6, p, div, button {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+h1 {
+    padding: 0;
+    margin: 10px;
+}
+h2 {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/*----タイトル画面----*/
+#game-title {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    top: 405px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 510px;
+    width: 680px;
+    background: 50% -300%;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    margin-top: 25px;
+    background-image: url(img/title.png);
+}
+.start{
+    margin: 20px;
+    color: white;
+}
+#start{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    font-size: 30px;
+    height: 50px;
+    width: 400px;
+    margin-top: 0px;
+}
+
+/*----ゲー?��?画面----*/
+#game-display {
+    display: flex;
+    flex-flow: column;
+    align-items: end;
+    height: 510px;
+    width: 680px;
+    margin-top: 50px;
+    background-size: cover;
+    background-image: url(img/sougen.png);
+    z-index: 2;
+}
+
+/*----カ?��?トイン----*/
+#cutin-display {
+    display: none;
+    height: 510px;
+    width: 680px;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(41, 41, 41);
+}
+#cutin-text {
+    font-size: 50px;
+    color: rgb(247, 247, 247);
+}
+
+/*----選択画面----*/
+#choice-display {
+    position: relative;
+    height: 360px;
+    width: 680px;
+    margin: auto 0 0 0;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    background-color: rgba(0,0,0,0.3);
+    display: none;
+}
+.choice {
+    width: 400px;
+    height: 50px;
+    margin: 20px auto;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 5px;
+    color: white;
+    z-index: 5;
+}
+
+#choice-img1{
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    top: 405px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 510px;
+    width: 680px;
+    
+}
+#choice-center {
+    margin-bottom: -25px;
+    height: 150px;
+    width: 150px;
+    background-size: 110%;
+    background-repeat: no-repeat;
+}
+
+#choice-img2 {
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    top: 405px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 510px;
+    width: 680px;
+    
+}
+#choice-left {
+    margin-bottom: 100px;
+    margin-right: 70px;
+    height: 200px;
+    width: 200px;
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-image: url(img/left.png);
+}
+#choice-right {
+    margin-bottom: 100px;
+    height: 200px;
+    width: 200px;
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-image: url(img/right.png);
+}
+
+
+/*----ログ----*/
+#log-display {
+    visibility: hidden;
+    position: relative;
+    height: 150px;
+    width: 680px;
+    margin: auto 0 0 0;
+}
+#log-title {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0,0,0,0.7);
+    height: 50px;
+    margin: 0;
+    padding: 0;
+}
+#log-name {
+    color: rgb(232, 232, 232);
+    font-size: 30px;
+    margin: 0 0 0 10px;
+    padding: 0;
+    left: 10px;
+    width: 600px;
+}
+#log-area {
+    background-color: rgba(0, 0, 0, 0.504);
+    height: 100px;
+    margin: 0;
+    padding: 0;
+}
+#log {
+    width: 670px;
+    color: rgb(232, 232, 232);
+    margin: 0 0 0 10px;
+    padding: 0;
+    font-size: 22px;
+    word-break: break-all;
+}
+
+/*----キャラ表示----*/
+#chara-display {
+    visibility: hidden;
+    position: absolute;
+    margin-right: 320px;
+    margin-top: 125px;
+}
+#chara-display img{
+    width: 400px;
+}
+
+/*----らくえん----*/
+#rakuen-input-display {
+    display: none;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.8);
+    position: absolute;
+    top: 405px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 510px;
+    width: 680px;
+}
+#rakuen-title {
+    font-weight: 100;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 50px;
+}
+#rakuen-input {
+    border: 1px solid;
+    border-color: white;
+    background-color: rgba(0,0,0,0);
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    height: 70px;
+    width: 300px;
+    margin: 10px 0 30px 0;
+    padding: 0;
+    border-radius: 5px;
+}
+#rakuen-soushin {
+    border: 1px solid;
+    font-size: 20px;
+    width: 300px;
+    height: 50px;
+    margin: 0;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 5px;
+    color: white;
+}
+
+/*----?��?スト用----*/
+.test {
+    margin: 0;
+    padding: 0;
+    width: 60;
+    height: 30px;
+}
+.test-input {
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 20px;
+}
+#debug {
+    display: flex;
+}
+#test-test{
+    margin: 0 10px 0 0;
+    padding: 0;
+}
+
+#info {
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+#skipButton {
+    width: 250px;
+    color: white;
+    background-color: #005B98;
+}
+
+#koukando-button {
+    height: 30px;
+}
+
+#koukando-display {
+    display: none;
+}
+
+#drunk {
+    width: 400px;
+    display: none;
+    position: absolute;
+    left: 5px;
+    top: 0px;
+    font-weight: bold;
+    color: white;
+    font-size: 30px;
+}
+
+.gage {
+    margin-bottom: 100px;
+    height: 40px;
+    width: 40px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(img/wine.png);
+}
+
+#triangle {
+    display: block;
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    margin-top: 35px;
+    right: 5px;
+    animation: fadeInOut 1.5s infinite;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#skipCheck {
+    width: 200px;
+    color: white;
+}
+
+#end-list-button {
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    margin-right: 240px;
+    margin-top: 460px;
+    font-weight: bold;
+    font-size: 15px;
+    position: absolute;
+    border-radius: 5px;
+    border: 3px solid #000;
+    z-index: 10;
+}
+
+
+#end-content {
+    position: absolute;
+    height: 510px;
+    width: 680px;
+    top: 150px;
+    background-color: #000000;
+    display: none;
+    flex-wrap: wrap;
+    padding: 10px;
+    padding-top: 30px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-content: flex-start;
+    z-index: 5;
+}
+
+
+.end-item {
+    width: calc(23% - 10px); /* �e�A�C�e���̕��𒲐� */
+    height: 50px; /* ������50px�ɕύX */
+    background-color: #000000;
+    color: #ffffff;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 5px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+    border: 3px solid #fff;
+}

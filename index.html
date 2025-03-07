@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ヒモ勇者</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body oncontextmenu="return false;">
+    <header>
+        <h1>ヒモ勇者</h1>
+        <div id="debug">
+            <div id="koukando-display">
+                <p id="lillian-koukanndo"></p>
+                <p id="arena-koukanndo"></p>
+                <p id="leon-koukanndo"></p>
+            </div>
+            <button id="koukando-button">好感度を表示</button>
+        </div>
+    </header>
+    <main>
+        <div id="cutin-display" onclick="cutInFinish()">
+            <p id="cutin-text"></p>
+        </div>
+        <div id="rakuen-input-display">
+            <h3 id="rakuen-title">合言葉は？</h3>
+            <input id="rakuen-input" type="text">
+            <button id="rakuen-soushin" type="button" onclick="rakuenSoushin()">送信</button>
+        </div>
+        <div id="game-display">
+            <div id="info"></div>
+            <div id="chara-display">
+                <img id="chara-img" src="./img/alex.png" alt="Character">
+            </div>
+            <div id="choice-img1">
+                <div id="choice-center"></div>
+            </div>
+            <div id="choice-img2">
+                <div id="choice-left" onclick="choiceButtonClick(2)"></div>
+                <div id="choice-right" onclick="choiceButtonClick(1)"></div>
+            </div>
+            <div id="choice-display">
+                <div id="drunk">酔い度：
+                    <div id="gage1" class="gage"></div>
+                    <div id="gage2" class="gage"></div>
+                    <div id="gage3" class="gage"></div>
+                </div>
+                <button id="choice1" class="choice" onclick="choiceButtonClick(1)">選択肢1</button>
+                <button id="choice2" class="choice" onclick="choiceButtonClick(2)">選択肢2</button>
+                <button id="choice3"class="choice" onclick="choiceButtonClick(3)">選択肢3</button>
+            </div>
+            <div id="log-display">
+                <div id="log-title">
+                    <h6 id="log-name"></h6>
+                    <label id="skipCheck">
+                        <input type="checkbox" name="checkBoxSkip" value="true" id="check">永続スキップ
+                    </label>
+                    <button id="skipButton">次の選択肢までスキップ: OFF</button>
+                </div>
+                <div id="log-area">
+                    <p id="log"></p>
+                    <div id="triangle">▼</div>
+                </div>
+            </div>
+            <div id="game-title" onclick="opening()">
+                <h1 class="start">　</h1>
+                <h1 class="start">　</h1>
+                <h1 class="start" id="start">画面クリックでスタート</h1>
+            </div>
+
+            <div id="end-content">
+                <div class="end-item" id="end-item1">？？？END</div>
+                <div class="end-item" id="end-item2">？？？END</div>
+                <div class="end-item" id="end-item3">？？？END</div>
+                <div class="end-item" id="end-item4">？？？END</div>
+                <div class="end-item" id="end-item5">？？？END</div>
+                <div class="end-item" id="end-item6">？？？END</div>
+                <div class="end-item" id="end-item7">？？？END</div>
+                <div class="end-item" id="end-item8">？？？END</div>
+                <div class="end-item" id="end-item9">？？？END</div>
+                <div class="end-item" id="end-item10">？？？END</div>
+                <div class="end-item" id="end-item11">？？？END</div>
+                <div class="end-item" id="end-item12">？？？END</div>
+                <div class="end-item" id="end-item13">？？？END</div>
+                <div class="end-item" id="end-item14">？？？END</div>
+                <div class="end-item" id="end-item15">？？？END</div>
+                <div class="end-item" id="end-item16">？？？END</div>
+                <div class="end-item" id="end-item17">？？？END</div>
+                <div class="end-item" id="end-item18">？？？END</div>
+                <div class="end-item" id="end-item19">？？？END</div>
+                <div class="end-item" id="end-item20">？？？END</div>
+                <div class="end-item" id="end-item21">？？？END</div>
+                <div class="end-item" id="end-item22">？？？END</div>
+                <div class="end-item" id="end-item23">？？？END</div>
+                <div class="end-item" id="end-item24">？？？END</div>
+            </div>
+            <button id="end-list-button">エンド一覧</button>
+        </div>
+    </main>
+    <audio id="badend-se" src="audio/badend.mp3" type="audio/mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
